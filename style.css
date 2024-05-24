@@ -3,7 +3,10 @@
     padding: 0;
 }
 body {
-    background-color: #111826;
+    background-color: #111;
+}
+:root {
+    --main-blue: #1054F3
 }
 /*header*/
 
@@ -14,6 +17,8 @@ nav {
     justify-content: space-between;
     padding: 25px 0px;
     align-items: center;
+    background-color: #111;
+    width: 100%;
 }
 ul {
     list-style-type: none;
@@ -86,7 +91,7 @@ header {
 body::before {
     content: "";
     position: absolute;
-    background: url("Background.svg") center;
+    background: url("dot-grid.svg") no-repeat center/cover;
     height: 71vh;
     width: 100%;
     z-index: -1
@@ -147,9 +152,30 @@ body::before {
     display: flex;
     gap: 15px;
 }
-.buttons-block {
+/*.buttons-block-mobile {
+    background-color: red;
+}*/
+.buttons-block-mobile {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.buttons-block, .buttons-block-mobile {
     flex-wrap: wrap;
     justify-content: center;
+}
+.buttons-block-mobile button {
+    height: 55px;
+    width: 40%;
+    border-radius: 12px;
+    background-color: #1054F3;
+    border: none;
+    outline: none;
+    font: 500 16px "Plus Jakarta Sans", sans-serif;
+    color: #fff;
+}
+.buttons-block-mobile {
+    margin-left: -15px
 }
 .buttons-block button {
     height: 55px;
@@ -161,7 +187,7 @@ body::before {
     font: 500 16px "Plus Jakarta Sans", sans-serif;
     color: #fff;
 }
-.buttons-block button:nth-child(2) {
+.buttons-block button:nth-child(2), .buttons-block-mobile button:nth-child(2) {
     background-color: transparent;
     border: 1px solid #8991A9
 }
@@ -299,7 +325,7 @@ body::before {
     display: flex;
     align-items: center;
     gap: 10px;
-    font: 300 16px "Inter", sans-serif;
+    font: 300 clamp(10px, 4vw, 16px) "Inter", sans-serif;
     color: #fff
 }
 
@@ -320,12 +346,12 @@ body::before {
     box-shadow: inset 0px 4px 12.7px rgba(255, 255, 255, 0.25);
 }
 .topic-name {
-    font: 600 24px/26px "Inter", sans-serif;
+    font: 600 clamp(18px, 4vw, 24px)/26px "Inter", sans-serif;
     color: #fff
 }
 
 .topic-description {
-    font: 300 16px/26px "Inter", sans-serif;
+    font: 300 clamp(10px, 4vw, 16px)/26px "Inter", sans-serif;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -410,8 +436,9 @@ body::before {
     grid-template-columns: repeat(4, 400px);
     grid-template-areas: "a b c d";
     place-items: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 24px
+    /*border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 24px;*/
+    gap: 15px
 }
 .principle-blocks span {
     display: flex;
@@ -422,7 +449,8 @@ body::before {
     border-radius: 50px;
     font: 600 26px "Raleway", sans-serif;
     background-color: #1054F3;
-    color: #fcfcfc
+    color: #fcfcfc;
+    position: relative;
 }
 .principle-blocks article {
     padding: 50px 30px;
@@ -431,25 +459,61 @@ body::before {
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    background: linear-gradient(172.45deg, rgba(255, 255, 255, 0.092) -10.97%, rgba(255, 255, 255, 0) 112.1%);
-    box-shadow: inset 0px 4px 17.6px rgba(255, 255, 255, 0.06);
+    background-color: #141414;
+    /*box-shadow: inset 0px 4px 17.6px rgba(255, 255, 255, 0.06);*/
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
+.circle:hover::before {
+    opacity: 1;
+  }
+  .circle::before,
+  .circle::after {
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
+  }
+  .circle::before {
+    background: radial-gradient(
+      800px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(177, 255, 187, 0.1),
+      /*rgba(16, 84, 243, 0.4),*/
+      transparent 40%
+    );
+    z-index: 3;
+  }
+  
+  .circle::after {  
+    background: radial-gradient(
+      600px circle at var(--mouse-x) var(--mouse-y), 
+      rgba(255, 255, 255, 0.9),
+      transparent 40%
+    );
+    z-index: 1;
+  }
 .life-time {
     grid-area: a;
-    border-radius: 24px 0 0 24px;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /*border-radius: 24px 0 0 24px;*/
+    /*border-right: 1px solid rgba(255, 255, 255, 0.2);*/
 }
 .extra-stuff {
     grid-area: b;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /*border-right: 1px solid rgba(255, 255, 255, 0.2);*/
 }
 .easy-to-read {
     grid-area: c;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    /*border-right: 1px solid rgba(255, 255, 255, 0.2);*/
 }
 .easy-access {
     grid-area: d;
-    border-radius: 0 24px 24px 0;
+    /*border-radius: 0 24px 24px 0;*/
 }
 .principle-blocks h4 {
     font: 700 24px/24px "Inter", sans-serif;
@@ -770,7 +834,7 @@ footer .logo {
     color: #fff
   }
   .menu-active {
-    height: 30vh
+    height: 250px
   }
 @media screen and (max-width: 1024px) {
     nav {
@@ -840,7 +904,7 @@ footer .logo {
         width: 90%
     }
     .buttons-block.mobile button{
-        width: 45%
+        width: 40%
     }
     .closeIcon.material-icons {
         display: none;
@@ -849,18 +913,21 @@ footer .logo {
         display: block;
       }
       .reasons-grid {
-        grid-template-columns: 360px;
-        grid-template-rows: 230px;
+        grid-template-columns: 300px;
+        grid-template-rows: 200px;
     }
     .topic-list-grid {
-        grid-template-columns: 360px;
+        grid-template-columns: 300px;
         grid-template-rows: 300px;
     }
     .reasons {
         gap: 15px;
     }
+    .reasons-grid span {
+        padding: 20px;
+    }
     .principle-blocks {
-        grid-template-columns: 360px;
+        grid-template-columns: 280px;
         grid-template-areas: "a"
                              "b"
                              "c"
@@ -877,7 +944,7 @@ footer .logo {
         padding: 30px;
         border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: 24px;
-        width: 300px;
+        width: 250px;
         gap: 20px;
     }
     .prising figure img, .price-block a {
@@ -901,5 +968,9 @@ footer .logo {
         /*margin: 10% auto;
         position: absolute;*/
         display: none;
+    }
+    .buttons-block.mobile {
+        width: 90%;
+        padding-left: 25px;
     }
 }
