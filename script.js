@@ -11,22 +11,24 @@ answers.forEach((event) => {
 
 const menu = document.querySelector(".header__mobile");
 const hamburger = document.querySelector(".menu");
-const closeMenu = document.querySelector(".closeIcon");
-const openMenu = document.querySelector(".menuIcon");
+const bars = document.querySelectorAll(".menu .bars span"); // Добавляем селекторы для линий меню
 
 function toggleMenu() {
+  menu.classList.toggle("menu-active");
+
+  // Проверяем, активно ли меню, и изменяем стили линий для создания крестика
   if (menu.classList.contains("menu-active")) {
-    menu.classList.remove("menu-active");
-    closeMenu.style.display = "none";
-    openMenu.style.display = "block";
+    bars[0].style.transform = "translateY(8px) rotate(135deg)";
+    bars[0].style.transition = "all .2s linear";
+    bars[1].style.transform = "translateY(8px) rotate(45deg)";
+    bars[1].style.transition = "all .2s linear";
   } else {
-    menu.classList.add("menu-active");
-    closeMenu.style.display = "block";
-    openMenu.style.display = "none";
+    bars[0].style.transform = "";
+    bars[1].style.transform = "";
   }
 }
 
-hamburger.addEventListener("click", toggleMenu)
+hamburger.addEventListener("click", toggleMenu);
 
 document.querySelectorAll("#cards, #cards1").forEach(container => {
   container.onmousemove = e => {
@@ -62,7 +64,10 @@ window.onload = function() {
 };*/
 
 
-const marquees = [...document.querySelectorAll('.marque')];
+
+
+
+/*const marquees = [...document.querySelectorAll('.marque')];
 
 marquees.forEach((marquee) => {
     marquee.innerHTML = marquee.innerHTML + '&nbsp;'.repeat(5);
@@ -87,7 +92,32 @@ function move() {
     });
 
     requestAnimationFrame(move);
+}*/
+
+function Marque(selector, speed) {
+  const parentSelector = document.querySelector(selector);
+  const clone = parentSelector.innerHTML;
+  const firstElement = parentSelector.children[0];
+  let i = 0;
+  console.log(firstElement);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+  parentSelector.insertAdjacentHTML('beforeend', clone);
+
+  setInterval(function () {
+    firstElement.style.marginLeft = `-${i}px`;
+    if (i > firstElement.clientWidth) {
+      i = 0;
+    }
+    i = i + speed;
+  }, 0);
 }
+
+//after window is completed load
+//1 class selector for marquee
+//2 marquee speed 0.2
+window.addEventListener('load', Marque('.marque', 0.8))
+
+
 
 
 /*gsap.registerPlugin(ScrollTrigger);

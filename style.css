@@ -119,6 +119,10 @@ header {
     font-family: "Fira Code", sans-serif;
     text-transform: uppercase;
 }
+.logo img {
+    width: 40px;
+    height: 40px;
+}
 .mobile-purchase  {
     border-radius: 12px;
     background: var(--main-gradient);
@@ -138,7 +142,7 @@ header {
     padding: 0;
 }
 .instagram {
-    color: #1054F3;
+    color: #9EFB66;
 }
 
 .buttons ul {
@@ -688,12 +692,14 @@ header {
 .btn {
     width: 100px;
     height: 35px;
-    background: #1163ff;
+    background: var(--main-gradient);
     position: relative;
     text-align: center;
-    border-radius: 0.45em;
-    font-family: "Arial";
+    border-radius: 10px;
+    font-family: "Inter", sans-serif;
     transition: background 0.3s;
+    font-weight: 500;
+    color: #111
   }
   
   .btn::before {
@@ -731,6 +737,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    color: #111
   }
   
   .button-wrapper,.btn-text, .btn .icon {
@@ -739,7 +746,7 @@ header {
     width: 100%;
     height: 100%;
     left: 0;
-    color: #fff;
+    color: #111;
   }
   
   .btn-text {
@@ -799,7 +806,7 @@ header {
     color: #fff;
 }
 .topic-list h4 {
-    font: 600 clamp(22px, 4vw, 32px)/26px "Raleway", sans-serif;
+    font: 600 clamp(22px, 4vw, 32px)/42px "Raleway", sans-serif;
     color: #fff;
     width: min(95%, 800px);
     /*width: 800px;*/
@@ -1315,9 +1322,26 @@ footer .logo {
 
 .menu {
     display: none;
+    position: relative;
+    width: 35px;
+    height: 35px;
 }
-.menu i {
-    margin-right: 40px;
+.bars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    transform: translateY(-8px);
+}
+.bar1, .bar2 {
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    position: absolute;
+}
+.bar2 {
+    transform: translateY(15px);
 }
 .header__mobile {
     height: 0;
@@ -1353,7 +1377,6 @@ footer .logo {
     transition: all 0.3s ease-in;
     transition-delay: 0.25s;
   }
-  .test 
   .macbook{
     position: relative; 
     left: 0; 
@@ -1480,7 +1503,7 @@ footer .logo {
     width: 100%;
     flex-direction: column;
     position: relative;
-    padding: 5% 0;
+    margin-top: 3%
 }
 .free-preview img {
     width: 509px;
@@ -1778,8 +1801,11 @@ footer .logo {
     .main-list, header .buttons.main {
         display: none;
     }
-    header {
+    /*header {
         padding: 10px;
+    }*/
+    header {
+        margin-top: 5%
     }
     .mobile-purchase {
         display: none;
@@ -1795,6 +1821,7 @@ footer .logo {
     }
     .menu {
         display: block;
+        margin-right: 20px
     }
     .reviews figure {
         padding: 0;
@@ -1878,10 +1905,9 @@ footer .logo {
         padding: 10px;
         top: 0;
         left: 0;
-        /*background-color: transparent;
-        backdrop-filter: blur(10px);*/
-        background-color: #111;
-        height: 30px;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        /*background-color: #111;*/
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     .line {
@@ -1918,6 +1944,9 @@ footer .logo {
     }
     .free-preview {
         padding: 0;
+    }
+    .marque {
+        height: 15vh;
     }
 }
 @media screen and (max-width: 767px) {
