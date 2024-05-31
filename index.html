@@ -3,17 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" class="css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"> <!--fontawesome library-->
     <title>Recharge Your CSS!</title>
 </head>
 <body>
+    <div class="close">
+        <p>-10% dedicated to launch!</p>
+        <a href="#" class="close-purchase">Get it now</a>
+        <a href="#" class="close-icon">
+            <img src="xmark-circle.svg" alt="close icon">
+        </a>
+    </div>
     <header>
         <nav>
             <span class="logo">
-                <img src="logo.svg" alt="logo">
+                <!--<img src="logo.svg" alt="logo">-->
                 <p>cssiseasy</p>
             </span>
             <ul class="main-list">
@@ -22,7 +29,7 @@
                 <li><a href="#"></a>Testimonials</li>
                 <li><a href="#"></a>Purchase</li>
             </ul>
-            <div class="buttons main">
+            <!--<div class="buttons main">
                         <a href="#" class="socials instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
@@ -32,7 +39,8 @@
                         <a href="#" class="socials">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-            </div>
+            </div>-->
+            <a href="#" class="mobile-purchase">Purchase</a>
             <div class="menu">
                 <i class="menuIcon material-icons">menu</i>
                 <i class="closeIcon material-icons">close</i>
@@ -56,75 +64,175 @@
         <div class="introduction">
             <span class="reviews">
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1714951191764-db7876745f01?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    <img src="https://images.unsplash.com/photo-1714951191764-db7876745f01?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    <img src="https://images.unsplash.com/photo-1714951191764-db7876745f01?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    <img src="https://images.unsplash.com/photo-1714951191764-db7876745f01?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                    <figcaption>
-                        <div class="stars">
-                            <p>4.9</p>
-                            <span>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </span>
-                        </div>
-                        <p>10K Student Enroll</p>
-                    </figcaption>
+                    <img src="cssiseasy-logo.png" alt="">
                 </figure>
             </span>
-            <h2>Meet game-changer frontend developer starter pack</h2>
+            <h2>Meet game-changer <span>frontend developer</span> starter pack <span class="point"></span></h2>
             <h3>Five years ago, during my beginning of my journey into the world of web development, I encountered many obstacles... I've been thinking all the time, is it possible to create something that can change the life of every beginner?</h3>
             <div class="buttons-block">
-                <button>Get Free Preview <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="primary">Get Free Preview <i class="fa-solid fa-arrow-right"></i></button>
                 <button>Read More <i class="fa-solid fa-arrow-right"></i></button>
             </div>
         </div>
         <!---<div class="book-section">
             <img src="book.svg" alt="">
         </div>--->
+        <h2 class="value">Helped thousands of people to master HTML & CSS</h2>
+        <div id="latest-news" class="marque">
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p>3k</p>
+                        <p>200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p>3k</p>
+                        <p>200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p>3k</p>
+                        <p>200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p>3k</p>
+                        <p>200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p class="likes">3k</p>
+                        <p class="views">200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p class="likes">3k</p>
+                        <p class="views">200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p class="likes">3k</p>
+                        <p class="views">200k+</p>
+                    </span>
+                </section>
+            </div>
+            <div class="marque-one">
+                <img src="google.png" alt="post image">
+                <section>
+                    <p>Google input trick</p>
+                    <p>200k+ views</p>
+                    <span>
+                        <p class="likes">3k</p>
+                        <p class="views">200k+</p>
+                    </span>
+                </section>
+            </div>
+        </div>
+
+        <!--<div class="test"  data-barba="container" data-barba-namespace="index">
+        <div class="macbook">
+            <div class="mockup mockup-macbook loaded opened">
+                <div class="part top">
+                    <img src="https://incoding.co.kr/portfolio/img/macbook-top.png" alt="" class="top">
+                    <img src="https://incoding.co.kr/portfolio/img/macbook-cover-b.svg" alt="" class="cover">
+                    <div class="macbook-background"></div>
+                </div>
+                <div class="part bottom">
+                    <img src="https://incoding.co.kr/portfolio/img/macbook-cover-b.svg" alt="" class="cover">
+                    <img src="https://incoding.co.kr/portfolio/img/macbook-bottom.png" alt="" class="bottom">
+                </div>
+            </div>
+        </div>
+        </div>-->
+
+        <!--<section class="ebook">
+            <img class="ebook-cover" src="tablet.svg" alt="">
+            <span class="ebook-label">Created your Own Product</span>
+            <span class="ebook-label">Created your Own Product</span>
+            <span class="ebook-label">Created your Own Product</span>
+            <span class="ebook-label">Created your Own Product</span>
+        </section>-->
+
         <div class="reasons">
             <h2 class="heading">You need this E-Book if you are:</h2>
             <h3 class="description">While embarking on this path, you will encounter many difficulties, but in which case will the book be useful to you?</h3>
-            <div class="reasons-grid">
-                <span class="details">
+            <div id="cards" class="reasons-grid">
+                <span class="details circle">
                     <div class="icon">
                         <img src="profile-circle.svg" alt="profile circle">
                     </div>
                     <p>Dreamed of</p>
                     <p>Get into programming but didn't know where to start</p>
                 </span>
-                <span class="details">
+                <span class="details circle">
                     <div class="icon">
                         <img src="box-iso.svg" alt="box iso">
                     </div>
                     <p>You've already</p>
                     <p>Been engaged in web development or programming, but you are dissatisfied with your progress and results</p>
                 </span>
-                <span class="details">
+                <span class="details circle">
                     <div class="icon">
                         <img src="chart.svg" alt="chart">
                     </div>
                     <p>You sure that</p>
                     <p>The initial path of a web developer would be easy for you, but only if you had a good teacher (mentor)</p>
                 </span>
-                <span class="details">
+                <span class="details circle">
                     <div class="icon">
                         <img src="presention-chart.svg" alt="presention chart">
                     </div>
                     <p>Watch all time</p>
                     <p>Web development lessons, endless guides, tips and tricks, but when you start practicing you feel insecure and confused</p>
                 </span>
-                <span class="details">
+                <span class="details circle">
                     <div class="icon">
                         <img src="money-square.svg" alt="money square">
                     </div>
                     <p>You have already</p>
                     <p>Been engaged in Web development, but you quit because it is too difficult and you feel demotivated and do not want to continue...</p>
                 </span>
-                <span class="details">
+                <span class="details circle">
                     <div class="icon">
                         <img src="video-play.svg" alt="video play">
                     </div>
@@ -138,7 +246,7 @@
 
         <div class="topic-list">
             <h2 class="heading">You will learn</h2>
-            <h3 class="description">We always face difficulties, in particular due to the fact that the information we see in the documentation is not structured correctly, I fixed it and collected all the necessary HTML and CSS topics in one place!</h3>
+            <h3 class="description">In this book you are gonna learn HTML and CSS. We always face difficulties, in particular due to the fact that the information we see in the documentation is not structured correctly, I fixed it and collected all the necessary HTML and CSS topics in one place!</h3>
             <div class="topic-list-grid">
                 <span class="block">
                     <div class="description-block">
@@ -290,36 +398,34 @@
 
 
 
-        <div id="cards" class="principle">
+        <div class="principle">
             <div class="principle-description">
                 <p>If you want to know something else,</p>
-                <h2>“ It's time you learned about the <span>LEEE</span> principle ”.</h2>
+                <h2>“ It's time you learned about the <span>LEE</span> principle ”.</h2>
             </div>
-            <div class="principle-blocks">
+            <div id="cards1" class="principle-blocks">
                 <article class="life-time circle">
-                    <img src="leee-1.svg" alt="">
+                    <img src="lee-1.svg" alt="">
                     <h4>Life-time updates</h4>
                     <p>Buy once = get updates completely for free for whole time. When a new version of the book is released, you will receive it by email.</p>
-                    <!--<span>1</span>-->
                 </article>
                 <article class="extra-stuff circle">
-                    <img src="leee-1.svg" alt="">
-                    <h4>Life-time updates</h4>
-                    <p>Buy once = get updates completely for free for whole time. When a new version of the book is released, you will receive it by email.</p>
+                    <img src="lee-2.svg" alt="">
+                    <h4>Easy-to-read</h4>
+                    <p>The whole book is written in simple language, with cool illustrations and clear sections with code, now you do not need to waste time and look at hundreds of sites in search of valuable information.</p>
                     <!--<span>1</span>-->
                 </article>
                 <article class="easy-to-read circle">
-                    <img src="leee-1.svg" alt="">
-                    <h4>Life-time updates</h4>
-                    <p>Buy once = get updates completely for free for whole time. When a new version of the book is released, you will receive it by email.</p>
+                    <img src="lee-3.svg" alt="">
+                    <h4>Easy access</h4>
+                    <p>Everything you need to work - any electronic device, no matter a smartphone, tablet or computer - is perfectly adapted for all devices.</p>
                     <!--<span>1</span>-->
                 </article>
-                <article class="easy-access circle">
+                <!--<article class="easy-access circle">
                     <img src="leee-1.svg" alt="">
-                    <h4>Life-time updates</h4>
-                    <p>Buy once = get updates completely for free for whole time. When a new version of the book is released, you will receive it by email.</p>
-                    <!--<span>1</span>-->
-                </article>
+                    <h4>Extra stuff</h4>
+                    <p>In addition to the book, you will receive additional files: an archive with all the source codes from this book, as well as the most important cheat sheets.</p>
+                </article>-->
             </div>
         </div>
 
@@ -341,7 +447,7 @@
                             <p class="price-heading">One plan you need</p>
                             <p class="price-main">This is the first massive step in becoming a master as web developer (One-time Payment)</p>
                         </figcaption>
-                        <img src="pricing.svg" alt="">
+                        <!--<img src="pricing.svg" alt="">-->
                     </figure>
                     <div class="price-list">
                         <span>
@@ -396,7 +502,20 @@
                 </div>
 
             </div>
+
+            <div class="accordion">
+                <div class="accordion__question">
+                    <p>What device would be appropriate for my work with the code and information in this book?</p>
+                    <img src="arrow.svg" alt="">
+                </div>
      
+                <div class="accordion__answer">
+                    <p>
+                        To view the entire book, all you need is a smartphone and a pdf reader installed (usually on your device by default). To practice working with HTML and CSS, a PC or laptop is best. Features are not important here, we will use a code editor to work (they usually do not load the device) and a single browser tab to view the result. You can also work with the code from a phone or tablet, but then it is better to get a keyboard and a mouse for them (there are many examples in the book, which you should test in your code editor).
+                    </p>
+                </div>
+            </div>
+
             <div class="accordion">
                 <div class="accordion__question">
                     <p>How many materials I can access for this Course?</p>
@@ -435,13 +554,67 @@
                     </p>
                 </div>
             </div>
-            <a href="#">Still have questions? Contact Me!</a>
+
+            <div class="accordion">
+                <div class="accordion__question">
+                    <p>If I don't like something, can I get a refund on my purchase?</p>
+                    <img src="arrow.svg" alt="">
+                </div>
+     
+                <div class="accordion__answer">
+                    <p>
+                        Of course. To do this, email me or send message on any social media, and include your purchase details (чек заказа/mail/order number)
+                    </p>
+                </div>
+            </div>
+            <!--<a href="#">Still have questions? Contact Me!</a>-->
+        </section>
+        <section class="free-preview">
+            <div class="preview-cont">
+                <h2>Literally you after reading this book:</h2>
+                <div class="box-container">
+                    <div class="glow">True knowledges</div>
+                    <div class="box" data-speed="0.4">Weak information</div>
+                    <div class="glow">Powerful theory and practice</div>
+                    <div class="glow">Loves coding</div>
+                    <div class="box" data-speed="0.75">Demotivated</div>
+
+                    <div class="glow">Knows modern CSS techniques</div>
+                    <div class="box" data-speed="0.4">Fears</div>
+                    <div class="glow">Able to create modern CSS layouts</div>
+                    <div class="glow">Created few nice projects</div>
+                    <div class="box" data-speed="0.75">Old CSS techniques</div>
+
+                    <div class="glow">Able to practice without watching videos</div>
+                    <div class="box" data-speed="0.4">Bad mentor</div>
+                    <div class="glow">Knows how to solve problems</div>
+                    <div class="glow">Created a powerful developer foundation</div>
+                    <div class="box" data-speed="0.75">Can't find useful information</div>
+                    <div class="box" data-speed="0.75">CSS is so hard...</div>
+                </div>
+            </div>
+        </section>
+        <section class="mail">
+            <article>
+                <h2>Have questions, feedback or anything to say?</h2>
+                <p>Email us at <a href="#">contact@greatfrontend.com</a> or use one of the options below. We usually get back within a day or two.</p>
+                <span>or</span>
+                <div class="mail-links">
+                    <a href="#">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#3A3A3A" d="M12 2.16867C15.1807 2.16867 15.6145 2.16867 16.9157 2.16867C18.0723 2.16867 18.6506 2.45783 19.0843 2.60241C19.6627 2.89157 20.0964 3.03615 20.5301 3.46988C20.9639 3.90362 21.253 4.33735 21.3976 4.91566C21.5422 5.3494 21.6867 5.92771 21.8313 7.08434C21.8313 8.38554 21.8313 8.6747 21.8313 12C21.8313 15.3253 21.8313 15.6145 21.8313 16.9157C21.8313 18.0723 21.5422 18.6506 21.3976 19.0843C21.1084 19.6627 20.9639 20.0964 20.5301 20.5301C20.0964 20.9639 19.6627 21.253 19.0843 21.3976C18.6506 21.5422 18.0723 21.6867 16.9157 21.8313C15.6145 21.8313 15.3253 21.8313 12 21.8313C8.6747 21.8313 8.38554 21.8313 7.08434 21.8313C5.92771 21.8313 5.3494 21.5422 4.91566 21.3976C4.33735 21.1084 3.90362 20.9639 3.46988 20.5301C3.03615 20.0964 2.74699 19.6627 2.60241 19.0843C2.45783 18.6506 2.31325 18.0723 2.16867 16.9157C2.16867 15.6145 2.16867 15.3253 2.16867 12C2.16867 8.6747 2.16867 8.38554 2.16867 7.08434C2.16867 5.92771 2.45783 5.3494 2.60241 4.91566C2.89157 4.33735 3.03615 3.90362 3.46988 3.46988C3.90362 3.03615 4.33735 2.74699 4.91566 2.60241C5.3494 2.45783 5.92771 2.31325 7.08434 2.16867C8.38554 2.16867 8.81928 2.16867 12 2.16867ZM12 0C8.6747 0 8.38554 0 7.08434 0C5.78313 0 4.91566 0.289157 4.19277 0.578314C3.46988 0.867471 2.74699 1.30121 2.0241 2.0241C1.30121 2.74699 1.01205 3.3253 0.578314 4.19277C0.289157 4.91566 0.144578 5.78313 0 7.08434C0 8.38554 0 8.81928 0 12C0 15.3253 0 15.6145 0 16.9157C0 18.2169 0.289157 19.0843 0.578314 19.8072C0.867471 20.5301 1.30121 21.253 2.0241 21.9759C2.74699 22.6988 3.3253 22.988 4.19277 23.4217C4.91566 23.7108 5.78313 23.8554 7.08434 24C8.38554 24 8.81928 24 12 24C15.1807 24 15.6145 24 16.9157 24C18.2169 24 19.0843 23.7108 19.8072 23.4217C20.5301 23.1325 21.253 22.6988 21.9759 21.9759C22.6988 21.253 22.988 20.6747 23.4217 19.8072C23.7108 19.0843 23.8554 18.2169 24 16.9157C24 15.6145 24 15.1807 24 12C24 8.81928 24 8.38554 24 7.08434C24 5.78313 23.7108 4.91566 23.4217 4.19277C23.1325 3.46988 22.6988 2.74699 21.9759 2.0241C21.253 1.30121 20.6747 1.01205 19.8072 0.578314C19.0843 0.289157 18.2169 0.144578 16.9157 0C15.6145 0 15.3253 0 12 0Z"/>
+                            <path fill="#3A3A3A" d="M12 5.78313C8.53012 5.78313 5.78313 8.53012 5.78313 12C5.78313 15.4699 8.53012 18.2169 12 18.2169C15.4699 18.2169 18.2169 15.4699 18.2169 12C18.2169 8.53012 15.4699 5.78313 12 5.78313ZM12 16.0482C9.83133 16.0482 7.95181 14.3133 7.95181 12C7.95181 9.83133 9.68675 7.95181 12 7.95181C14.1687 7.95181 16.0482 9.68675 16.0482 12C16.0482 14.1687 14.1687 16.0482 12 16.0482Z" fill="white"/>
+                            <path fill="#3A3A3A" d="M18.3614 7.08434C19.1599 7.08434 19.8072 6.43704 19.8072 5.63856C19.8072 4.84007 19.1599 4.19277 18.3614 4.19277C17.563 4.19277 16.9157 4.84007 16.9157 5.63856C16.9157 6.43704 17.563 7.08434 18.3614 7.08434Z" fill="white"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
         </section>
     </main>
     <footer>
         <div class="footer-links">
             <span class="logo">
-                <img src="logo.svg" alt="png">
+                <img src="" alt="png">
                 <p>cssiseasy</p>
             </span>
             <div class="buttons">
@@ -486,6 +659,8 @@
         <span class="footer-line"></span>
         <p class="footer-description">© 2024 CourseCoach Temlplates. All rights reserved. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, </p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
