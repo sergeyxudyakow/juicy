@@ -65,23 +65,25 @@ window.onload = function() {
 const marquees = [...document.querySelectorAll('.marque')];
 
 marquees.forEach((marquee) => {
-    marquee.innerHTML += ' '.repeat(5);
-    marquee.style.position = 'relative'; // Изменение позиции на relative для правильного отображения анимации
+    marquee.innerHTML = marquee.innerHTML + '&nbsp;'.repeat(5);
     marquee.i = 0;
     marquee.step = 3;
-    marquee.width = marquee.clientWidth; // Удаление +1 для корректного отображения анимации
-    marquee.innerHTML = `${marquee.innerHTML}&nbsp;`.repeat(100);
-    
+    marquee.width = marquee.clientWidth + 1;
+    marquee.innerHTML = `${marquee.innerHTML}&nbsp;`.repeat(10);
+
     marquee.addEventListener('mouseenter', () => (marquee.step = 0), false);
     marquee.addEventListener('mouseleave', () => (marquee.step = 3), false);
 });
 
-move(); // Вызов функции move() без requestAnimationFrame, чтобы начать анимацию сразу
+requestAnimationFrame(move);
 
 function move() {
     marquees.forEach((marquee) => {
-        marquee.style.marginLeft = -marquee.i + 'px';
-        marquee.i = (marquee.i + marquee.step) % (marquee.clientWidth + 1); // Использование оператора % для обеспечения бесконечной анимации
+        marquee.style.marginLeft = `-${marquee.i}px`;
+        marquee.i = marquee.i < marquee.width ? marquee.i + marquee.step : 0;
+        if (marquee.i === 0) {
+            marquee.i = 1;
+        }
     });
 
     requestAnimationFrame(move);
