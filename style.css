@@ -692,14 +692,14 @@ header {
 .btn {
     width: 100px;
     height: 35px;
-    background: var(--main-gradient);
+    background: #fff;
     position: relative;
     text-align: center;
     border-radius: 10px;
     font-family: "Inter", sans-serif;
     transition: background 0.3s;
     font-weight: 500;
-    color: #111
+    color: #111;
   }
   
   .btn::before {
@@ -806,7 +806,7 @@ header {
     color: #fff;
 }
 .topic-list h4 {
-    font: 600 clamp(22px, 4vw, 32px)/42px "Raleway", sans-serif;
+    font: 600 clamp(22px, 4vw, 32px)/32px "Raleway", sans-serif;
     color: #fff;
     width: min(95%, 800px);
     /*width: 800px;*/
@@ -834,7 +834,7 @@ header {
     inset: 0;
     background: url("dot-grid.svg") center;
     z-index: -1;
-    opacity: 0.1
+    opacity: 0.3
 }
 .principle-description {
     text-align: center;
@@ -889,7 +889,7 @@ header {
     position: relative;
 }
 .principle-blocks article {
-    padding: 50px 30px;
+    padding: 30px 30px 50px 30px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1805,7 +1805,7 @@ footer .logo {
         padding: 10px;
     }*/
     header {
-        margin-top: 5%
+        margin-top: 50px;
     }
     .mobile-purchase {
         display: none;
@@ -1834,7 +1834,7 @@ footer .logo {
         display: none;
     }
     .introduction {
-        gap: 5px;
+        gap: 15px;
         height: auto;
     }
     .introduction h3 {
@@ -1875,7 +1875,7 @@ footer .logo {
                              "d";
     }
     .principle h2 {
-        line-height: 30px;
+        line-height: 50px;
     }
     .prising {
         display: flex;
@@ -1900,7 +1900,7 @@ footer .logo {
     }
     nav {
         position: fixed;
-        width: 100%;
+        width: min(100%, 1100px);
         z-index: 9999;
         padding: 10px;
         top: 0;
@@ -1937,21 +1937,16 @@ footer .logo {
         display: none;
       }
       .free-preview img {
-        transform: scale(0.6);
+        width: min(90%, 450px);
+        height:370px;
     }
     .book-layout {
         transform: scale(0.5);
     }
-    .free-preview {
-        padding: 0;
-    }
     .marque {
-        height: 15vh;
+        height: 17vh;
     }
-}
-@media screen and (max-width: 767px) {
-    .version {
-        transform: scale(0.6) rotate(45deg);
-        right: -100px;
-   }
+    .principle-blocks article {
+        padding: 0 30px 30px 30px;
+    }
 }
