@@ -94,7 +94,7 @@ gsap.registerPlugin(ScrollTrigger);
 gsap.to(".box", {
   scrollTrigger: {
     trigger: ".free-preview",
-    start: 'top top+=50px',
+    start: 'top top+=250px',
     end: "right left",
     markers: true,
     scrub: 1,

@@ -1550,6 +1550,7 @@ footer .logo {
         top: 0;
         left: 0;
         backdrop-filter: blur(10px);
+        height: 30px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
     .line {
@@ -1565,10 +1566,10 @@ footer .logo {
         display: none;
     }
     .box-container {
-        grid-template-columns: repeat(1,300px);
+        grid-template-columns: repeat(2,180px);
         grid-auto-rows: 100px;
         width: 100%;
-        gap: 10px;
+        gap: 0;
         font-size: 20px;
         margin: 0 auto;
       }
