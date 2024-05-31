@@ -88,34 +88,21 @@ function move() {
 }
 
 
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 
-// apply parallax effect to any element with a data-speed attribute
 gsap.to(".box", {
   scrollTrigger: {
     trigger: ".free-preview",
-    start: 'top top+=250px',
+    start: 'top top+=0px',
     end: "right left",
-    markers: true,
     scrub: 1,
     pin: ".free-preview",
   },
   opacity: 0,
 }
-);
+);*/
 
-/*gsap.to("[data-speed]", {
-  scrollTrigger: {
-    trigger: ".free-preview",
-    start: 'top top+=50px',
-    end: "right left",
-    markers: true,
-    scrub: 1
-  },
-  y: -200
-});*/
-
-gsap.to(".ebook-cover", {
+/*gsap.to(".ebook-cover", {
   scrollTrigger: {
     trigger: ".ebook",
     start: 'top top+=50px',
@@ -126,4 +113,54 @@ gsap.to(".ebook-cover", {
   },
   transform: "scale(0.7)"
 }
+);*/
+
+
+
+
+/*const throttled = (delay, fn) => {
+  let lastCall = 0;
+  return function (...args) {
+    const now = new Date().getTime();
+    if (now - lastCall < delay) {
+      return;
+    }
+    lastCall = now;
+    return fn(...args);
+  };
+};
+
+const movableElementsWrapper = document.querySelector(
+  ".book-layout"
 );
+const speed = 0.35;
+
+const items = gsap.utils.toArray(".ebook-label").map(element => {
+  return {
+    element,
+    shiftValue: element.getAttribute("data-value") / 250,
+    xSet: gsap.quickSetter(element, "x", "px"),
+    ySet: gsap.quickSetter(element, "y", "px"),
+  }
+});
+
+const mouse = {
+  x: 0,
+  y: 0
+};
+
+const mouseMoveHandler = (e) => {
+  mouse.x = e.x;
+  mouse.y = e.y;
+};
+
+movableElementsWrapper.onmousemove = mouseMoveHandler;
+
+gsap.ticker.add(() => {
+  const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+  
+  items.forEach(item => {
+    item.xSet(item.shiftValue * mouse.x * dt);
+    item.ySet(item.shiftValue * mouse.y * dt);
+  });
+});*/

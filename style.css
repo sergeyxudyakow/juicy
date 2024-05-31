@@ -9,7 +9,8 @@ body {
     --main-blue: #1054F3;
     --main-dark: #111;
     --main-white: #fff;
-    --main-gradient: linear-gradient(100.76deg, #A4F370 -4.06%, #5BC81A 113.23%);
+    /*--main-gradient: linear-gradient(100.76deg, #A4F370 -4.06%, #5BC81A 113.23%);*/
+    --main-gradient: linear-gradient(319deg, #dbf26e 0%, #61fa74 37%, #1cfdd6 100%);
 
     --page-count: 20;
     --page-scroll: 25;
@@ -435,14 +436,16 @@ header {
 .ebook {
     height: 100vh;
     background-color: #303030;
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;*/
+    display: none;
+    
 }
 .ebook-cover {
     transform: scale(0);
 }
-.ebook-label {
+/*.ebook-label {
     font: 500 20px "Inter", sans-serif;
     color: #fff;
     position: absolute;
@@ -470,6 +473,32 @@ header {
     left: 50%;
     bottom: 4%;
     transform: translate(-50%, 100%);
+}*/
+
+.gallery {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gallery img {
+    width: 449px;
+    height: 586px;
+    object-fit: cover;
+}
+.gallery-image {
+    scroll-snap-align: start;
+}
+.gallery-block {
+    width: min(90%, 1000px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
 }
 /*reasons section*/
 .reasons {
@@ -1333,19 +1362,206 @@ footer .logo {
 }
 
 .free-preview {
-    background-color: #111;
+    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     flex-direction: column;
+    position: relative;
+    padding: 5% 0;
 }
-.free-preview h2 {
+.free-preview img {
+    width: 509px;
+    height: 666px;
+    z-index: 0;
+}
+.ebook-label {
+    font: 500 20px "Inter", sans-serif;
+    color: #fff;
+    padding:30px 20px;
+    height: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color: #D946EF;
+    z-index: 999;
+    text-align: center;
+    position: relative;
+}
+.book-layout {
+    background-color: transparent;
+    display: grid;
+    grid-template-areas: ". a a ."
+                         ". b b ."
+                         ". . c c"
+                         "d d . .";
+    width: 509px;
+    height: 666px;
+    z-index: 1;
+    position: absolute;
+}
+.ebook-label:nth-child(1) {
+    grid-area: a;
+    top: 0%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+.ebook-label:nth-child(2) {
+    grid-area: b;
+    transform: translate(-175px);
+}
+.ebook-label:nth-child(3) {
+    grid-area: c;
+    transform: translate(175px);
+}
+.ebook-label:nth-child(4) {
+    grid-area: d;
+    transform: translate(-100px);
+}
+.ebook-label::before {
+    content: "";
+    border: 16px solid transparent;
+    border-top: 16px solid #D946EF;
+    position: absolute;
+    left: 50%;
+    bottom: 4%;
+    transform: translate(-50%, 100%);
+}
+.swiper {
+    overflow: hidden;
+    cursor: grab;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.menu.is-dragging {
+    cursor: grabbing;
+}
+.menu--wrapper {
+    counter-reset: count;
+    display: flex;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 586px;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.menu--item {
+    counter-increment: count;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 100%;
+    overflow: hidden;
+}
+.menu--item figure {
+    position: absolute;
+    z-index: 1;
+    display: block;
+    user-select: none;
+    -webkit-appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    transform-origin: center;
+}
+.menu--item figure img {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 449px;
+    height: 586px;
+    object-fit: cover;
+    vertical-align: middle;
+    transform-origin: center;
+}
+.menu--item figure:before {
+    position: absolute;
+    z-index: 2;
+    bottom: 1vw;
+    left: 1vw;
+    display: inline-block;
+    content: "0" counter(count);
+    color: #fff;
+    font-size: 3vw;
+}
+
+.mobile-swiper {
+    overflow: auto;
+    display: flex;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 16px;
+    width: 85%;
+    margin: 0 auto;
+    border: 2px solid #303030;
+    padding: 20px;
+    border-radius: 25px;
+    gap: 15px;
+}
+.mobile-box {
+    height: 400px;
+    width: min(90%, 350px);
+    background-color: #fff;
+    margin-right: 5px;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
+}
+.mobile-swiper img {
+    width: 80%;
+    margin: auto;
+    object-fit: contain;
+    height: 80%;
+}
+/*.download-preview {
+    width: min(90%, 1100px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 0;
+    margin-top: 30px;
+}
+.download-preview a {
+    text-decoration: none;
+    color: #fff;
+    font: 400 clamp(20px, 4vw, 30px) "Raleway", sans-serif;
+    padding: 15px 35px;
+    border-radius: 5px;
+    background: var(--main-gradient);
+    color: #111
+}*/
+
+
+/*.free-preview h2 {
     font: 600 clamp(20px, 4vw, 40px) "Raleway", sans-serif;
     text-align: center;
     color: #fff;
     margin: 40px 0;
-}
+}*/
 .box-container {
     display: grid;
     grid-template-columns: repeat(4,300px);
@@ -1439,6 +1655,10 @@ footer .logo {
         /*border: 1px solid rgba(255, 255, 255, 0.2);*/
         border-radius: 24px
     }
+    .menu--item {
+        width: 100%;
+        height: 90vh;
+   }
 }
 
 @media screen and (max-width: 480px) {
@@ -1576,4 +1796,19 @@ footer .logo {
       .box, .glow {
         font: 600 18px "Raleway", sans-serif;
       }
+      .swiper {
+        display: none;
+      }
+      .free-preview img {
+        transform: scale(0.6);
+    }
+    .book-layout {
+        transform: scale(0.5);
+    }
+}
+@media screen and (max-width: 767px) {
+    .version {
+        transform: scale(0.6) rotate(45deg);
+        right: -100px;
+   }
 }
